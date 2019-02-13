@@ -59,7 +59,7 @@ public class TowerOfHanoi
 	public static void toh_without_recursion(int num_disks, int start_pos, int end_pos)
 	{
 		MyStack<element> a=new MyStack<>();
-		element e1=new element();		
+		element_ e1=new element_();		
 		int pos,n1,sp1,ep1;	
 		e1.n=num_disks;
 		e1.sp=start_pos;
@@ -68,7 +68,7 @@ public class TowerOfHanoi
 		
 		while(a.empty()==false)
 		{
-			element e3=new element();
+			element_ e3=new element_();
 			e3=a.pop();
 			n1=e3.n;
 			sp1=e3.sp;
@@ -82,19 +82,19 @@ public class TowerOfHanoi
 				}
 				else
 				{
-					element e2=new element();
+					element_ e2=new element_();
 					e2.n=n1-1;
 					e2.sp=pos;
 					e2.ep=ep1;
 					a.push(e2);
 					
-					element e4=new element();
+					element_ e4=new element_();
 					e4.n=1;
 					e4.sp=sp1;
 					e4.ep=ep1;
 					a.push(e4);
 					
-					element e5=new element();
+					element_ e5=new element_();
 					e5.n=n1-1;
 					e5.sp=sp1;
 					e5.ep=pos;
@@ -125,7 +125,7 @@ public class TowerOfHanoi
 	}
 }
 
-class element
+class element_
 {
 	public int n;
 	public int sp;
